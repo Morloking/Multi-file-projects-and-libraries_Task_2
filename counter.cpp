@@ -16,23 +16,23 @@ namespace my_namespace {
         int initValue = 0;
         Counter counter;
 
-        std::cout << "¬˚ ıÓÚËÚÂ ÛÍ‡Á‡Ú¸ Ì‡˜‡Î¸ÌÓÂ ÁÌ‡˜ÂÌËÂ Ò˜∏Ú˜ËÍ‡? ¬‚Â‰ËÚÂ ‰‡ ËÎË ÌÂÚ: ";
+        std::cout << "–í—ã —Ö–æ—Ç–∏—Ç–µ —É–∫–∞–∑–∞—Ç—å –Ω–∞—á–∞–ª—å–Ω–æ–µ –∑–Ω–∞—á–µ–Ω–∏–µ —Å—á—ë—Ç—á–∏–∫–∞? –í–≤–µ–¥–∏—Ç–µ –¥–∞ –∏–ª–∏ –Ω–µ—Ç: ";
         while (true) {
             std::cin >> answer;
-            if (answer == "‰‡" || answer == "ÌÂÚ") {
+            if (answer == "–¥–∞" || answer == "–Ω–µ—Ç") {
                 break;
             }
-            std::cout << "œÓÊ‡ÎÛÈÒÚ‡, ‚‚Â‰ËÚÂ '‰‡' ËÎË 'ÌÂÚ': ";
+            std::cout << "–ü–æ–∂–∞–ª—É–π—Å—Ç–∞, –≤–≤–µ–¥–∏—Ç–µ '–¥–∞' –∏–ª–∏ '–Ω–µ—Ç': ";
         }
 
-        if (answer == "‰‡") {
-            std::cout << "¬‚Â‰ËÚÂ Ì‡˜‡Î¸ÌÓÂ ÁÌ‡˜ÂÌËÂ Ò˜∏Ú˜ËÍ‡: ";
+        if (answer == "–¥–∞") {
+            std::cout << "–í–≤–µ–¥–∏—Ç–µ –Ω–∞—á–∞–ª—å–Ω–æ–µ –∑–Ω–∞—á–µ–Ω–∏–µ —Å—á—ë—Ç—á–∏–∫–∞: ";
             while (true) {
                 std::cin >> initValue;
                 if (std::cin.fail()) {
                     std::cin.clear();
                     std::cin.ignore(INT_MAX, '\n');
-                    std::cout << "Œ¯Ë·Í‡ ‚‚Ó‰‡. œÓÊ‡ÎÛÈÒÚ‡, ‚‚Â‰ËÚÂ ˆÂÎÓÂ ˜ËÒÎÓ: ";
+                    std::cout << "–û—à–∏–±–∫–∞ –≤–≤–æ–¥–∞. –ü–æ–∂–∞–ª—É–π—Å—Ç–∞, –≤–≤–µ–¥–∏—Ç–µ —Ü–µ–ª–æ–µ —á–∏—Å–ª–æ: ";
                 }
                 else {
                     std::cin.ignore(INT_MAX, '\n');
@@ -45,7 +45,7 @@ namespace my_namespace {
         char command;
         bool exitRequested = false;
         do {
-            std::cout << "¬‚Â‰ËÚÂ ÍÓÏ‡Ì‰Û ('+', '-', '=' ËÎË 'x'): ";
+            std::cout << "–í–≤–µ–¥–∏—Ç–µ –∫–æ–º–∞–Ω–¥—É ('+', '-', '=' –∏–ª–∏ 'x'): ";
             std::cin >> command;
 
             if (command == '=') {
@@ -56,7 +56,7 @@ namespace my_namespace {
             }
         } while (!exitRequested);
 
-        std::cout << "ƒÓ Ò‚Ë‰‡ÌËˇ!\n";
+        std::cout << "–î–æ —Å–≤–∏–¥–∞–Ω–∏—è!\n";
     }
     Counter::~Counter() {}
     int Counter::getValue() const { return numCounter; }
@@ -70,9 +70,9 @@ namespace my_namespace {
         case '-':
             decrement();
             return false;
-        case 'x':           // ‡Ì„ÎËÈÒÍ‡ˇ ‡ÒÍÎ‡‰Í‡
+        case 'x':           // –∞–Ω–≥–ª–∏–π—Å–∫–∞—è —Ä–∞—Å–∫–ª–∞–¥–∫–∞
             return true;
-        case '\xF5':        // ÛÒÒÍ‡ˇ ı ‚ ˝ÚÓÈ ÍÓ‰ËÓ‚ÍÂ
+        case '\xF5':        // —Ä—É—Å—Å–∫–∞—è —Ö –≤ —ç—Ç–æ–π –∫–æ–¥–∏—Ä–æ–≤–∫–µ
             return true;
         default:
             std::cout << "Unknown operation.\n";
